@@ -30,7 +30,7 @@
             <div class="card-body d-flex flex-row flex-wrap justify-content-between">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="./shop.html">УСЛУГИ</a>
+                        <a class="navbar-brand" href="./shop.html" name="top">УСЛУГИ</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -53,9 +53,9 @@
                       Сортировать
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <li><button class="dropdown-item" type="button">По возрастанию цены</button></li>
-                      <li><button class="dropdown-item" type="button">По убыванию цены</button></li>
-                      <li><button class="dropdown-item" type="button">По алфавиту</button></li>
+                      <li><button class="dropdown-item" type="button" onclick="filterPrice('high')">По возрастанию цены</button></li>
+                      <li><button class="dropdown-item" type="button" onclick="filterPrice('low')">По убыванию цены</button></li>
+                      <li><button class="dropdown-item" type="button" onclick="sortAsc()">По алфавиту</button></li>
                     </ul>
                   </div>
             </div>
@@ -63,12 +63,20 @@
               
             <div class="card-body">
                 <h5 class='card-title text-center'>Топ подборка</h5>
-                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                <form  id="UserEnter" name="UserEnter">
                     <input name="q" type="hidden" value="search">
                     <ul class="d-flex flex-row flex-wrap justify-content-around bg-light" id="node_for_insert">
                         <!--начало генерируемого фрагмента кода -->
                     </ul>
-                    <input class="btn btn-primary" type="Submit" value="Заказать услугу">
+                    <div class="d-flex flex-row flex-wrap justify-content-between">
+                        <input class="btn btn-primary" type="Submit" value="Заказать услугу">
+                        <button type="button" class="btn btn-primary">
+                            <a class="text-reset text-decoration-none"
+                            href="#top">  
+                            На верх 
+                        </a> 
+                    </button> 
+                    </div>                   
                 </form>
             </div>
             <!--окончание уникального содержания страницы-->
@@ -106,6 +114,7 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/sort.js"></script>
 </body>
 
 </html>
